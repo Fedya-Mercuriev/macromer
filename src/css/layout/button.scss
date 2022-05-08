@@ -1,0 +1,61 @@
+@import '../assets/variables';
+@import '../helpers/modificators';
+@import '../assets/mixins';
+
+.button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+.button {
+  cursor: pointer;
+  user-select: none;
+  transition: none;
+  box-sizing: border-box;
+  vertical-align: top;
+  display: inline-block;
+  position: relative;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  outline: none;
+  background: none;
+  font-family: $font-main;
+  font-style: normal;
+  font-weight: 600;
+  font-size: $size-main;
+  line-height: $line-main;
+  letter-spacing: 0;
+  text-align: center;
+  text-transform: none;
+  text-decoration: none;
+  transform-origin: 0 100%;
+  transform: translate3d( 0, 0, 0);
+  &:active {
+    transform: scale(0.97);
+  }
+}
+
+.button--outlined {
+  border-width: 1px;
+  border-style: solid;
+  transition: $transition-main;
+  &.button--black {
+    border-color: $color-black;
+    color: $color-black;
+    &:hover {
+      background: $color-black;
+      color: $color-white;
+    }
+  }
+}
+
+.button--round-xsmall {
+  border-radius: 2px;
+}
+
+.button--small {
+  padding: 5.5px 20px;
+  font-size: $size-small;
+  font-weight: 300;
+}

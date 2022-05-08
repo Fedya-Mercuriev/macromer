@@ -6,7 +6,103 @@
     <link rel="stylesheet" href="dist/css/vendor.css">
     <link rel="stylesheet" href="dist/css/common.css">
 </head>
-<body>
+<body class="body">
+<div class="body__wrapper">
+    <div class="body__header">
+        <header class="header -m-hidden">
+            <div class="header__wrapper">
+                <div class="header__sections-list">
+                    <div class="header__left">
+                        <div class="header__logo">
+                            <img src="dist/images/logo.png" alt="Логотип сайта" width="180" height="18">
+                        </div>
+                        <div class="header__nav">
+                            <div class="header__nav-item">
+                                <a js-scroll-to href="#products" class="header__nav-link">Продукция</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__right">
+                        <div class="header__nav">
+                            <div class="header__nav-item">
+                                <div class="header-toggle">
+                                    <div class="header-toggle__item">
+                                        <a href="/ru" class="header-toggle__link header-toggle__link--active">RU</a>
+                                    </div>
+                                    <div class="header-toggle__item">
+                                        <a href="/en" class="header-toggle__link">EN</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header__nav-item">
+                                <a js-scroll-to href="#feedback-form" class="button button--small button--black button--round-xsmall button--outlined">Задать вопрос</a>
+                            </div>
+                            <div class="header__nav-item header__nav-item--gap-left-xxxxsmall">
+                                <a href="tel:+78002006595" class="header__nav-link header__nav-link--bold">8 800 200 65 95</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <header js-mobile-menu class="header header--mobile -m-visible">
+            <div class="header__wrapper">
+                <div class="header__sections-list">
+                    <div class="header__left">
+                        <div class="header__logo">
+                            <img src="dist/images/logo.png" alt="Логотип сайта" width="146">
+                        </div>
+                    </div>
+                    <div class="header__right">
+                        <div class="header__nav">
+                            <div class="header__nav-item">
+                                <div js-open-mobile-menu href="#" class="header-burger">
+                                    <div class="header-burger__wrapper">
+                                        <i class="header-burger__upper"></i>
+                                        <i class="header-burger__lower"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-menu">
+                    <div class="header-menu__wrapper header-menu__wrapper_gap-inner-top-large">
+                        <div class="header-menu__nav">
+                            <div class="header-menu__nav-upper">
+                                <a js-scroll-to href="#products" class="header__nav-link">Продукция</a>
+                            </div>
+                            <div class="header-menu__nav-lower">
+                                <div class="header-menu__nav-list header-menu__nav-list_gap-xxsmall">
+                                    <div class="header-menu__nav-item">
+                                        <a href="tel:+78002006595" class="header__nav-link header__nav-link--bold">8 800 200 65 95</a>
+                                    </div>
+                                </div>
+                                <div class="header-menu__nav-list">
+                                    <div class="header-menu__nav-item">
+                                        <a js-scroll-to href="#feedback-form" class="button button--small button--black button--round-xsmall button--outlined">Задать вопрос</a>
+                                    </div>
+                                    <div class="header-menu__nav-item">
+                                        <div class="header-toggle">
+                                            <div class="header-toggle__item">
+                                                <a href="/ru" class="header-toggle__link header-toggle__link--active">RU</a>
+                                            </div>
+                                            <div class="header-toggle__item">
+                                                <a href="/en" class="header-toggle__link">EN</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+    <div class="body__content"></div>
+    <div class="body__footer"></div>
+</div>
     <script src="dist/js/vendor.js"></script>
     <script src="dist/js/common.js"></script>
 </body>

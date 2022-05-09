@@ -1,0 +1,20 @@
+@import "../assets/mixins";
+
+.block {
+  max-width: 1560px;
+}
+
+.block_rounded-small {
+  border-radius: 6px;
+}
+
+.block_gap_medium {
+  margin-bottom: 40px;
+}
+
+@include mq('tablet-small', max) {
+  .block_gap_medium {
+    margin-bottom: 34px;
+  }
+}
+

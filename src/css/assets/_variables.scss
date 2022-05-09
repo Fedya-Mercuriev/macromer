@@ -54,11 +54,8 @@ $line-main: calc(24/16);
 
 // Fonts
 $font-fallback-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-$font-lato: 'Lato', $font-fallback-main;
-$font-pacifico: 'Pacifico', $font-fallback-main;
-$font-century: 'Century Gothic', $font-fallback-main;
-$font-title: $font-lato;
-$font-main: $font-lato;
+$font-commissioner: 'Commissioner';
+$font-main: $font-commissioner;
 
 
 // Colors

@@ -1,4 +1,5 @@
 @import "../assets/variables";
+@import "../assets/mixins";
 
 * {
   min-width: 0;
@@ -73,6 +74,14 @@ body {
   &__content {
     position: relative;
     flex: 0 0 auto;
+  }
+  &__header_gap-xxxlarge {
+    margin-bottom: 112px;
+    @include mq('tablet-wide', max) {
+      & {
+        margin-bottom: 76px;
+      }
+    }
   }
   &__content {
     flex-grow: 1;

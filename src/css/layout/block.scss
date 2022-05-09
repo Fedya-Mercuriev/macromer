@@ -1,7 +1,8 @@
 @import "../assets/mixins";
+@import "../assets/variables";
 
 .block {
-  max-width: 1560px;
+
 }
 
 .block_rounded-small {
@@ -10,6 +11,20 @@
 
 .block_gap_medium {
   margin-bottom: 40px;
+}
+
+.block_gap_xxxlarge {
+  margin-bottom: 140px;
+}
+
+.block_white {
+  border: 1px solid $color-white;
+  color: $color-white;
+}
+
+.block_black {
+  border: 1px solid $color-black;
+  color: $color-black;
 }
 
 @include mq('tablet-small', max) {

@@ -72,12 +72,3 @@
     }
   }
 }
-
-.hero-block-content_white {
-  border: 1px solid $color-white;
-  .hero-block-content {
-    &__title, &__subtitle {
-      color: $color-white;
-    }
-  }
-}

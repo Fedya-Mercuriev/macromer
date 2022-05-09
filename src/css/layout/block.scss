@@ -17,6 +17,12 @@
   margin-bottom: 140px;
 }
 
+@include mq('phablet', max) {
+  .block_xs_gap_xxsmall {
+    margin-bottom: 26px;
+  }
+}
+
 .block_white {
   border: 1px solid $color-white;
   color: $color-white;

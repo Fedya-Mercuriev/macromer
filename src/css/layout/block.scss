@@ -2,7 +2,16 @@
 @import "../assets/variables";
 
 .block {
+  &__title {
+    max-width: 1240px;
+    margin-bottom: 27px;
+    color: $color-black;
+  }
 
+  &__title_medium {
+    font-size: 24px;
+    font-weight: 500;
+  }
 }
 
 .block_rounded-small {
@@ -15,6 +24,10 @@
 
 .block_gap_xxxlarge {
   margin-bottom: 140px;
+}
+
+.block_gap_xxlarge {
+  margin-bottom: 100px;
 }
 
 @include mq('phablet', max) {

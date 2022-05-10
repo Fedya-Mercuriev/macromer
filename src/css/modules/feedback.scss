@@ -1,0 +1,139 @@
+@import "../assets/mixins";
+@import "../assets/variables";
+
+.feedback {
+  &__wrapper {
+    display: flex;
+  }
+  &__left {
+    flex: 0 1 600px;
+    margin-right: 60px;
+  }
+  &__right {
+    flex: 0 1 920px;
+  }
+}
+
+@include mq('desktop', max) {
+  .feedback {
+    &__right {
+      flex: 0 1 570px;
+    }
+  }
+}
+
+@include mq('tablet-small', max) {
+  .feedback {
+    &__wrapper {
+      flex-direction: column;
+    }
+    &__left {
+      margin-right: 0;
+    }
+    &__left, &__right {
+      flex: 1 1 auto;
+    }
+  }
+}
+
+.feedback-description {
+  padding: 24px 78px 49px 42px;
+  &__title {
+    font-size: $size-xxxxlarge;
+    font-weight: 500;
+  }
+  &__content {
+    font-size: $size-xxlarge;
+    font-weight: 400;
+  }
+}
+
+@include mq('desktop', max) {
+  .feedback-description {
+    padding: 24px 48px 29px 32px;
+    &__title {
+      font-size: $size-xxlarge;
+    }
+    &__content {
+      font-size: $size-large;
+    }
+  }
+}
+
+@include mq('tablet-small', max) {
+  .feedback-description {
+    padding: 12px 45px 16px 16px;
+    &__title {
+      margin-bottom: 24px;
+      font-size: $size-xxxlarge;
+    }
+    &__content {
+      font-size: $size-medium;
+    }
+  }
+}
+
+.feedback-form {
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 -20px;
+  }
+  &__input-section {
+    flex: 0 1 420px;
+    margin: 20px;
+  }
+}
+
+@include mq('desktop', max) {
+  .feedback-form {
+    &__wrapper {
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
+  }
+}
+
+@include mq('desktop-ultrawide', max) {
+  .feedback-form {
+    &__input-section {
+      flex: 0 1 390px;
+    }
+  }
+}
+
+@include mq('desktop', max) {
+  .feedback-form {
+    &__input-section {
+      flex: 0 1 auto;
+    }
+  }
+}
+
+.feedback-input-section {
+  display: flex;
+  &__main {
+    flex: 0 0 auto;
+    margin-right: 19px;
+  }
+  &__extra {
+    font-size: $size-xsmall;
+    & a {
+      text-decoration: underline;
+    }
+  }
+}
+
+@include mq('tablet-small', max) {
+  .feedback-input-section {
+    flex-direction: column;
+    &__extra {
+      order: 1;
+      margin-bottom: 20px;
+    }
+    &__main {
+      order: 2;
+    }
+  }
+}

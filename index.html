@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="dist/css/vendor.css">
     <link rel="stylesheet" href="dist/css/common.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body class="body">
 <div class="body__wrapper">
@@ -758,6 +759,52 @@
                         </span>
                         <span class="button__icon button__icon_doc"></span>
                     </a>
+                </div>
+            </div>
+        </div>
+        <div  class="feedback block block_gap_xxxxlarge">
+            <div class="feedback__wrapper">
+                <div class="feedback__left">
+                    <div class="feedback-description block_black block_rounded-small">
+                        <div class="feedback-description__title">Не нашли, что искали?</div>
+                        <div class="feedback-description__content">Оставьте заявку и наши специалисты оперативно рассмотрят обращение и ответят на любой интересующий вас вопрос.</div>
+                    </div>
+                </div>
+                <div class="feedback__right">
+                    <div class="feedback-form">
+                        <form id="feedback" class="feedback-form__wrapper" js-feedback-form action="">
+                            <div class="feedback-form__input-section">
+                                <label for="">Имя*</label>
+                                <input type="text" name="name" required>
+                            </div>
+                            <div class="feedback-form__input-section">
+                                <label for="">Компания*</label>
+                                <input type="text" name="company" required>
+                            </div>
+                            <div class="feedback-form__input-section">
+                                <label for="">Телефон*</label>
+                                <input type="text" name="phone" required>
+                            </div>
+                            <div class="feedback-form__input-section">
+                                <label for="">Город*</label>
+                                <input type="text" name="city" minlength="2" required>
+                            </div>
+                            <div class="feedback-form__input-section">
+                                <label for="">Ваша отрасль*</label>
+                                <input type="text" name="field" required>
+                            </div>
+                            <div class="feedback-form__input-section">
+                                <div class="feedback-input-section">
+                                    <div class="feedback-input-section__main">
+                                        <button type="submit" class="button button_blue button_text_white button_middle">Отправить заявку</button>
+                                    </div>
+                                    <div class="feedback-input-section__extra">
+                                        Нажимая кнопку я выражаю своё согласие на обработку персональных данных в соответствии с <a href="#" target="_blank">условиями</a>.
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

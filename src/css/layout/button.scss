@@ -29,7 +29,7 @@
   text-align: center;
   text-transform: none;
   text-decoration: none;
-  transform-origin: 0 100%;
+  transform-origin: center;
   transform: translate3d( 0, 0, 0);
   &:active {
     transform: scale(0.97);
@@ -179,4 +179,13 @@
       background-color: $color-blue-dark;
     }
   }
+}
+
+.button_middle {
+  padding: 11px 20px;
+  border-radius: 6px;
+}
+
+.button_text_white {
+  color: $color-white;
 }

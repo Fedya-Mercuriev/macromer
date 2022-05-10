@@ -5,6 +5,21 @@
   min-width: 0;
 }
 
+:root {
+  --input-border: #8b8a8b;
+  --input-focus-h: 245;
+  --input-focus-s: 100%;
+  --input-focus-l: 42%;
+}
+
+a {
+  text-decoration: none;
+  color: $color-link;
+  &:hover {
+    color: $color-hover;
+  }
+}
+
 html,
 body {
   padding: 0;

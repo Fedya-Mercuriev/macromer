@@ -34,12 +34,35 @@
   &:active {
     transform: scale(0.97);
   }
+  &__icon {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    margin-left: auto;
+    margin-right: 0;
+    &::after {
+      content: '';
+      display: block;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &__icon_doc {
+    &::before {
+      background-image: url("../images/doc.png");
+    }
+  }
 }
 
 .button--outlined {
   border-width: 1px;
   border-style: solid;
   transition: $transition-main;
+  transform-origin: center;
   &.button--black {
     border-color: $color-black;
     color: $color-black;
@@ -54,8 +77,106 @@
   border-radius: 2px;
 }
 
-.button--small {
+.button_large {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 26px 20px 26px 24px;
+  border-radius: 10px;
+  font-size: 21px;
+  font-weight: 600;
+  color: $color-black;
+  transition: $transition-main;
+}
+
+@include mq('desktop', max) {
+  .button_large {
+    padding: 20px 20px 20px 24px;
+    font-size: $size-large;
+  }
+}
+
+@include mq('tablet', max) {
+  .button_large {
+    font-size: $size-medium;
+  }
+}
+
+@include mq('phablet', max) {
+  .button_large {
+    padding: 18px 18px;
+    font-size: $size-large;
+    .button__icon {
+      &::before {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}
+
+.button_small {
   padding: 5.5px 20px;
   font-size: $size-small;
   font-weight: 300;
+}
+
+.button_link {
+  .button__icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    &::before {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 32px;
+      transform: scale(0.7);
+      transform-origin: center;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      opacity: 0;
+      transition: $transition-main;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: scale(1) translate(-50%, -50%);
+      background-image: url("../images/arrow_right.png");
+      transform-origin: center;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      opacity: 1;
+      transition: $transition-main;
+    }
+  }
+  &:hover {
+    .button__icon {
+      &::before {
+        transform: scale(1);
+        opacity: 1;
+      }
+      &::after {
+        content: '';
+        transform: scale(0.7) translate(-50%, -50%);
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.button_blue {
+  &.button {
+    background-color: $color-blue;
+  }
+  &:hover {
+    &.button {
+      background-color: $color-blue-dark;
+    }
+  }
 }

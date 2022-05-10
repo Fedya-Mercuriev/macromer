@@ -22,12 +22,16 @@
   margin-bottom: 40px;
 }
 
-.block_gap_xxxlarge {
+.block_gap_xxxxlarge {
   margin-bottom: 140px;
 }
 
-.block_gap_xxlarge {
-  margin-bottom: 100px;
+.block_gap_xxxlarge {
+  margin-bottom: 120px;
+}
+
+.block_gap_xlarge {
+  margin-bottom: 80px;
 }
 
 @include mq('phablet', max) {

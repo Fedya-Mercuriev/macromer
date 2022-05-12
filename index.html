@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="dist/css/vendor.css">
+<!--    <link rel="stylesheet" href="dist/css/vendor.css">-->
     <link rel="stylesheet" href="dist/css/common.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
@@ -23,7 +23,7 @@
                         </div>
                         <div class="header__nav">
                             <div class="header__nav-item">
-                                <a js-scroll-to href="#products" class="header__nav-link">Продукция</a>
+                                <a js-scroll-to="products" class="header__nav-link">Продукция</a>
                             </div>
                         </div>
                     </div>
@@ -40,7 +40,7 @@
                                 </div>
                             </div>
                             <div class="header__nav-item">
-                                <a js-scroll-to href="#feedback-form" class="button button_small button--black button--round-xsmall button--outlined">Задать вопрос</a>
+                                <a js-scroll-to="feedback-form" class="button button_small button--black button--round-xsmall button--outlined">Задать вопрос</a>
                             </div>
                             <div class="header__nav-item header__nav-item--gap-left-xxxxsmall">
                                 <a href="tel:+78002006595" class="header__nav-link header__nav-link--bold">8 800 200 65 95</a>
@@ -75,7 +75,7 @@
                     <div class="header-menu__wrapper header-menu__wrapper_gap-inner-top-large">
                         <div class="header-menu__nav">
                             <div class="header-menu__nav-upper">
-                                <a js-scroll-to href="#products" class="header__nav-link">Продукция</a>
+                                <a js-scroll-to="products" class="header__nav-link">Продукция</a>
                             </div>
                             <div class="header-menu__nav-lower">
                                 <div class="header-menu__nav-list header-menu__nav-list_gap-xxsmall">
@@ -85,7 +85,7 @@
                                 </div>
                                 <div class="header-menu__nav-list">
                                     <div class="header-menu__nav-item">
-                                        <a js-scroll-to href="#feedback-form" class="button button_small button--black button--round-xsmall button--outlined">Задать вопрос</a>
+                                        <a js-scroll-to="feedback-form" class="button button_small button--black button--round-xsmall button--outlined">Задать вопрос</a>
                                     </div>
                                     <div class="header-menu__nav-item">
                                         <div class="header-toggle">
@@ -142,7 +142,7 @@
             </div>
             <div class="dropdowns">
                 <div class="dropdowns__wrapper">
-                    <div class="dropdowns__item">
+                    <div js-dropdown-wrapper class="dropdowns__item">
                         <div js-dropdown-toggle class="dropdown-list-toggle">
                             <div class="dropdown-list-toggle__icon dropdown-list-toggle__icon_arrow"></div>
                             <div class="dropdown-list-toggle__title">Пищевая промышленность</div>
@@ -242,7 +242,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="dropdowns__item">
+                    <div js-dropdown-wrapper class="dropdowns__item">
                         <div js-dropdown-toggle class="dropdown-list-toggle">
                             <div class="dropdown-list-toggle__icon dropdown-list-toggle__icon_arrow"></div>
                             <div class="dropdown-list-toggle__title">Строительство</div>
@@ -342,7 +342,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="dropdowns__item">
+                    <div js-dropdown-wrapper class="dropdowns__item">
                         <div js-dropdown-toggle class="dropdown-list-toggle">
                             <div class="dropdown-list-toggle__icon dropdown-list-toggle__icon_arrow"></div>
                             <div class="dropdown-list-toggle__title">Производство ЛКМ</div>
@@ -442,7 +442,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="dropdowns__item">
+                    <div js-dropdown-wrapper class="dropdowns__item">
                         <div js-dropdown-toggle class="dropdown-list-toggle">
                             <div class="dropdown-list-toggle__icon dropdown-list-toggle__icon_arrow"></div>
                             <div class="dropdown-list-toggle__title">Производство клеев, герметиков и адгезивов</div>
@@ -542,7 +542,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="dropdowns__item">
+                    <div js-dropdown-wrapper class="dropdowns__item">
                         <div js-dropdown-toggle class="dropdown-list-toggle">
                             <div class="dropdown-list-toggle__icon dropdown-list-toggle__icon_arrow"></div>
                             <div class="dropdown-list-toggle__title">Нефтедобывающая промышленность</div>
@@ -642,7 +642,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="dropdowns__item">
+                    <div js-dropdown-wrapper class="dropdowns__item">
                         <div js-dropdown-toggle class="dropdown-list-toggle">
                             <div class="dropdown-list-toggle__icon dropdown-list-toggle__icon_arrow"></div>
                             <div class="dropdown-list-toggle__title">Полиграфия</div>
@@ -753,7 +753,7 @@
                     </div>
                 </div>
                 <div class="promo__right">
-                    <a href="" target="_blank" class="button button_text_black button_link button_blue button_large">
+                    <a href="" target="_blank" class="button button_text_white button_link button_blue button_large">
                         <span class="button__title">
                             Скачать каталог продукции
                         </span>
@@ -762,7 +762,7 @@
                 </div>
             </div>
         </div>
-        <div  class="feedback block block_gap_xxxxlarge">
+        <div  class="feedback block">
             <div class="feedback__wrapper">
                 <div class="feedback__left">
                     <div class="feedback-description block_black block_rounded-small">
@@ -772,28 +772,30 @@
                 </div>
                 <div class="feedback__right">
                     <div class="feedback-form">
-                        <form id="feedback" class="feedback-form__wrapper" js-feedback-form action="">
+                        <form id="feedback-form" class="feedback-form__wrapper" js-feedback-form action="">
                             <div class="feedback-form__input-section">
-                                <label for="">Имя*</label>
-                                <input type="text" name="name" required>
+                                <label for="name" class="feedback-form__label">Имя*</label>
+                                <input id="name" class="feedback-form__input-text is-error" type="text" name="name" required>
                             </div>
                             <div class="feedback-form__input-section">
-                                <label for="">Компания*</label>
-                                <input type="text" name="company" required>
+                                <label for="company" class="feedback-form__label">Компания*</label>
+                                <input id="company" class="feedback-form__input-text" type="text" name="company" required>
                             </div>
                             <div class="feedback-form__input-section">
-                                <label for="">Телефон*</label>
-                                <input type="text" name="phone" required>
+                                <label for="phone" class="feedback-form__label">Телефон*</label>
+                                <input id="phone" class="feedback-form__input-text" type="text" name="phone" required>
                             </div>
                             <div class="feedback-form__input-section">
-                                <label for="">Город*</label>
-                                <input type="text" name="city" minlength="2" required>
+                                <label for="city" class="feedback-form__label">Город*</label>
+                                <input id="city" class="feedback-form__input-text" type="text" name="city" minlength="2" required>
                             </div>
                             <div class="feedback-form__input-section">
-                                <label for="">Ваша отрасль*</label>
-                                <input type="text" name="field" required>
+                                <label for="field" class="feedback-form__label">Ваша отрасль*</label>
+                                <div class="select">
+
+                                </div>
                             </div>
-                            <div class="feedback-form__input-section">
+                            <div class="feedback-form__input-section feedback-form__input-section_submit">
                                 <div class="feedback-input-section">
                                     <div class="feedback-input-section__main">
                                         <button type="submit" class="button button_blue button_text_white button_middle">Отправить заявку</button>
@@ -804,14 +806,33 @@
                                 </div>
                             </div>
                         </form>
+                        <div class="feedback-form__error-text">
+                            * Обязательные поля не заполнены
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="body__footer"></div>
+    <div class="body__footer">
+        <footer class="footer">
+            <div class="footer__wrapper">
+                <div class="footer__main">
+                    <img src="dist/images/logo.png" class="footer__logo" width="280" height="28">
+                    <div class="footer__copyright">© Copyright ООО "НПП "Макромер" им. В.С. Лебедева" (с 2022 г)</div>
+                </div>
+                <div class="footer__extra">
+                    <div class="footer__address">600016, Владимирская обл., г. Владимир,<br>ул. Большая Нижегородская, д. 77</div>
+                    <div class="footer__contact-info">
+                        <a class="link link_bold link_medium link_black" href="tel:+78002006595">8 800 200 65 95</a>
+                        <a href="mailto:adress@macromer.ru">adress@macromer.ru</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
 </div>
-    <script src="dist/js/vendor.js"></script>
+<!--    <script src="dist/js/vendor.js"></script>-->
     <script src="dist/js/common.js"></script>
 </body>
 </html>

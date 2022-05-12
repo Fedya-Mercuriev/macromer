@@ -19,6 +19,11 @@ $breakpoints: (
       @content;
     }
   }
+  @else {
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
 }
 
 @function calculateRem($size) {

@@ -51,6 +51,7 @@
 }
 
 .dropdown-list-toggle {
+  box-sizing: border-box;
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
@@ -130,7 +131,7 @@
       flex: 0 0 30px;
     }
     &__title {
-      font-size: 23px;
+      font-size: 16px;
     }
     &__icon_medium {
       width: 40px;

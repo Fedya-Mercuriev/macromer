@@ -21,7 +21,7 @@ const templateSelect = (data = [], defaultText = 'Р’С‹Р±РµСЂРёС�
   return `
   <div class="select__backdrop" data-select="backdrop"></div>
   <div class="select__trigger-wrapper">
-  <input id="field" type="text" class="select__trigger" data-select="trigger" value="${defaultText}">
+  <input id="field" type="text" class="select__trigger" data-select="trigger" value="${defaultText}" disabled>
   </div>
   <div class="select__dropdown">
     <ul class="select__items">
@@ -135,7 +135,7 @@ class CustomSelect {
 
 const select1 = new CustomSelect('.select', {
       defaultValue: 'Пищевая промышленность',
-      data: ['Пищевая промышленность', 'Строительство', 'Производство ЛКМ', 'Производство клеев, герметиков и адгезивов', 'Нефтедобывающая промышленность', 'Полиграфия'],
+      data: ['Пищевая промышленность', 'Строительство', 'Производство ЛКМ', 'Производство клеев, герметиков и адгезивов', 'Нефтедобывающая промышленность', 'Полиграфия', 'Другое'],
       onSelected(item) {
         console.log(`Выбранное значение: ${item.textContent}`);
       },

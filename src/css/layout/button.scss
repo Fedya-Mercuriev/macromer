@@ -188,4 +188,7 @@
 
 .button_text_white {
   color: $color-white;
+  &:hover {
+    color: $color-black;
+  }
 }

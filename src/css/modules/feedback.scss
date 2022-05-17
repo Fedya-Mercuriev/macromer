@@ -375,7 +375,7 @@ input:-webkit-autofill {
 @include mq('desktop-ultrawide', max) {
   .feedback-input-section {
     &__extra {
-      font-size: $size-xxsmall;
+      font-size: $size-xxxsmall;
     }
   }
 }

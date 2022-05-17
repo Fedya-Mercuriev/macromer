@@ -25,7 +25,7 @@
             });
             $(window).off('.trigger-mobile-menu').on('click.trigger-mobile-menu', function (e) {
                 if (!$(e.target).closest('[js-mobile-menu]').length) {
-                    v
+                    _this.close();
                 }
                 if ($(e.target).attr('js-scroll-to')) {
                     _this.close();

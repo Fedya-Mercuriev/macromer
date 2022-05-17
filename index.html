@@ -3,11 +3,835 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="dist/css/vendor.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600&display=swap" rel="stylesheet">
+<!--    <link rel="stylesheet" href="dist/css/vendor.css">-->
     <link rel="stylesheet" href="dist/css/common.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
-<body>
-    <script src="dist/js/vendor.js"></script>
+<body class="body">
+<div class="body__wrapper">
+    <div class="block block_align_center body__header body__header_gap-xxxlarge">
+        <header class="header -m-hidden">
+            <div class="header__wrapper">
+                <div class="header__sections-list">
+                    <div class="header__left">
+                        <div class="header__logo">
+                            <img src="dist/images/logo.png" alt="Логотип сайта" width="180" height="18">
+                        </div>
+                        <div class="header__nav">
+                            <div class="header__nav-item">
+                                <a js-scroll-to="products" class="header__nav-link">Продукция</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__right">
+                        <div class="header__nav">
+                            <div class="header__nav-item">
+                                <div class="header-toggle">
+                                    <div class="header-toggle__item">
+                                        <a href="/ru" class="header-toggle__link header-toggle__link--active">RU</a>
+                                    </div>
+                                    <div class="header-toggle__item">
+                                        <a href="/en" class="header-toggle__link">EN</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header__nav-item">
+                                <a js-scroll-to="feedback-form" class="button button_small button--black button--round-xsmall button--outlined">Задать вопрос</a>
+                            </div>
+                            <div class="header__nav-item header__nav-item--gap-left-xxxxsmall">
+                                <a href="tel:+78002006595" class="header__nav-link header__nav-link--bold">8 800 200 65 95</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <header js-mobile-menu class="header header--mobile -m-visible">
+            <div class="header__wrapper">
+                <div class="header__sections-list">
+                    <div class="header__left">
+                        <div class="header__logo">
+                            <img src="dist/images/logo.png" alt="Логотип сайта" width="146">
+                        </div>
+                    </div>
+                    <div class="header__right">
+                        <div class="header__nav">
+                            <div class="header__nav-item">
+                                <div js-open-mobile-menu href="#" class="header-burger">
+                                    <div class="header-burger__wrapper">
+                                        <i class="header-burger__upper"></i>
+                                        <i class="header-burger__lower"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-menu">
+                    <div class="header-menu__wrapper header-menu__wrapper_gap-inner-top-large">
+                        <div class="header-menu__nav">
+                            <div class="header-menu__nav-upper">
+                                <a js-scroll-to="products" class="header__nav-link">Продукция</a>
+                            </div>
+                            <div class="header-menu__nav-lower">
+                                <div class="header-menu__nav-list header-menu__nav-list_gap-xxsmall">
+                                    <div class="header-menu__nav-item">
+                                        <a href="tel:+78002006595" class="header__nav-link header__nav-link--bold">8 800 200 65 95</a>
+                                    </div>
+                                </div>
+                                <div class="header-menu__nav-list">
+                                    <div class="header-menu__nav-item">
+                                        <a js-scroll-to="feedback-form" class="button button_small button--black button--round-xsmall button--outlined">Задать вопрос</a>
+                                    </div>
+                                    <div class="header-menu__nav-item">
+                                        <div class="header-toggle">
+                                            <div class="header-toggle__item">
+                                                <a href="/ru" class="header-toggle__link header-toggle__link--active">RU</a>
+                                            </div>
+                                            <div class="header-toggle__item">
+                                                <a href="/en" class="header-toggle__link">EN</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+    <div class="block block_align_center body__content">
+        <div class=" block_rounded-small block_gap_medium">
+            <div class="hero-block">
+                <div class="hero-block__wrapper block_rounded-small">
+                    <div class="hero-block-content block_white block_rounded-small">
+                        <div class="hero-block-content__title -row-gap_small">
+                            Разработка и производство полимерной продукции
+                        </div>
+                        <div class="hero-block-content__subtitle">ООО «НПП «МАКРОМЕР» им. В.С. Лебедева»</div>
+                        <div class="hero-block-content__icon"></div>
+                    </div>
+                    <div class="hero-block__background"></div>
+                </div>
+            </div>
+        </div>
+        <div class="about block_gap_xxxxlarge block_xs_gap_xxsmall">
+            <div class="about__wrapper">
+                <div class="about__left">
+                    <div class="about__title block_black block_rounded-small">
+                        <img src="dist/images/logo.png" alt="Логотип сайта">
+                    </div>
+                    <div class="about__icon"></div>
+                </div>
+                <div class="about__right">
+                    <div class="block_rounded-small about__description">
+                        Компания «Макромер» — <br>
+                        научно-производственное предприятие, с 1990 года специализирующееся в области разработки и производства органических олигомерных продуктов.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="products" class="block_gap_xlarge">
+            <div class="block__title block__title_medium">
+                Продукция Макромер используется в следующих отраслях промышленности:
+            </div>
+            <div class="dropdowns">
+                <div class="dropdowns__wrapper">
+                    <div js-dropdown-wrapper class="dropdowns__item">
+                        <div js-dropdown-toggle class="dropdown-list-toggle">
+                            <div class="dropdown-list-toggle__icon dropdown-list-toggle__icon_arrow"></div>
+                            <div class="dropdown-list-toggle__title">Пищевая промышленность</div>
+                            <div class="dropdown-list-toggle__icon dropdown-list-toggle__icon_medium dropdown-list-toggle__icon_turnip dropdown-list-toggle__icon_align-left"></div>
+                        </div>
+                        <div js-dropdown-list class="dropdown-list">
+                            <div class="dropdown-list__wrapper">
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">Полиуретановые дисперсии</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Аквапол</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">Пленкообразователи</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Акрол</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">Полиакрилат-полиолы</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Лапрол АК</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">Фотоотверждаемые композиции</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Акролат ПФ</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">ПУ-загуститель</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Лапрол ДЗ</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">Низковязкие эпоксидные смолы</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Элад</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">Диспергаторы</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Макромер П</div>
+                                                <div class="dropdown-list-item__subtitle">Макромер C</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">Коалесценты</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Лапрол 251</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div js-dropdown-wrapper class="dropdowns__item">
+                        <div js-dropdown-toggle class="dropdown-list-toggle">
+                            <div class="dropdown-list-toggle__icon dropdown-list-toggle__icon_arrow"></div>
+                            <div class="dropdown-list-toggle__title">Строительство</div>
+                            <div class="dropdown-list-toggle__icon dropdown-list-toggle__icon_medium dropdown-list-toggle__icon_constructor dropdown-list-toggle__icon_align-left"></div>
+                        </div>
+                        <div js-dropdown-list class="dropdown-list">
+                            <div class="dropdown-list__wrapper">
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">Полиуретановые дисперсии</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Аквапол</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">Пленкообразователи</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Акрол</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">Полиакрилат-полиолы</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Лапрол АК</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">Фотоотверждаемые композиции</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Акролат ПФ</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">ПУ-загуститель</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Лапрол ДЗ</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">Низковязкие эпоксидные смолы</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Элад</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">Диспергаторы</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Макромер П</div>
+                                                <div class="dropdown-list-item__subtitle">Макромер C</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">Коалесценты</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Лапрол 251</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div js-dropdown-wrapper class="dropdowns__item">
+                        <div js-dropdown-toggle class="dropdown-list-toggle">
+                            <div class="dropdown-list-toggle__icon dropdown-list-toggle__icon_arrow"></div>
+                            <div class="dropdown-list-toggle__title">Производство ЛКМ</div>
+                            <div class="dropdown-list-toggle__icon dropdown-list-toggle__icon_medium dropdown-list-toggle__icon_roller dropdown-list-toggle__icon_align-left"></div>
+                        </div>
+                        <div js-dropdown-list class="dropdown-list">
+                            <div class="dropdown-list__wrapper">
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">Полиуретановые дисперсии</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Аквапол</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">Пленкообразователи</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Акрол</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">Полиакрилат-полиолы</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Лапрол АК</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">Фотоотверждаемые композиции</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Акролат ПФ</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">ПУ-загуститель</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Лапрол ДЗ</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">Низковязкие эпоксидные смолы</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Элад</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">Диспергаторы</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Макромер П</div>
+                                                <div class="dropdown-list-item__subtitle">Макромер C</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">Коалесценты</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Лапрол 251</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div js-dropdown-wrapper class="dropdowns__item">
+                        <div js-dropdown-toggle class="dropdown-list-toggle">
+                            <div class="dropdown-list-toggle__icon dropdown-list-toggle__icon_arrow"></div>
+                            <div class="dropdown-list-toggle__title">Производство клеев, герметиков и адгезивов</div>
+                            <div class="dropdown-list-toggle__icon dropdown-list-toggle__icon_medium dropdown-list-toggle__icon_tube dropdown-list-toggle__icon_align-left"></div>
+                        </div>
+                        <div js-dropdown-list class="dropdown-list">
+                            <div class="dropdown-list__wrapper">
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">Полиуретановые дисперсии</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Аквапол</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">Пленкообразователи</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Акрол</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">Полиакрилат-полиолы</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Лапрол АК</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">Фотоотверждаемые композиции</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Акролат ПФ</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">ПУ-загуститель</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Лапрол ДЗ</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">Низковязкие эпоксидные смолы</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Элад</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">Диспергаторы</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Макромер П</div>
+                                                <div class="dropdown-list-item__subtitle">Макромер C</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">Коалесценты</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Лапрол 251</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div js-dropdown-wrapper class="dropdowns__item">
+                        <div js-dropdown-toggle class="dropdown-list-toggle">
+                            <div class="dropdown-list-toggle__icon dropdown-list-toggle__icon_arrow"></div>
+                            <div class="dropdown-list-toggle__title">Нефтедобывающая промышленность</div>
+                            <div class="dropdown-list-toggle__icon dropdown-list-toggle__icon_medium dropdown-list-toggle__icon_tank dropdown-list-toggle__icon_align-left"></div>
+                        </div>
+                        <div js-dropdown-list class="dropdown-list">
+                            <div class="dropdown-list__wrapper">
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">Полиуретановые дисперсии</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Аквапол</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">Пленкообразователи</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Акрол</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">Полиакрилат-полиолы</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Лапрол АК</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">Фотоотверждаемые композиции</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Акролат ПФ</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">ПУ-загуститель</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Лапрол ДЗ</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">Низковязкие эпоксидные смолы</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Элад</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">Диспергаторы</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Макромер П</div>
+                                                <div class="dropdown-list-item__subtitle">Макромер C</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">Коалесценты</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Лапрол 251</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div js-dropdown-wrapper class="dropdowns__item">
+                        <div js-dropdown-toggle class="dropdown-list-toggle">
+                            <div class="dropdown-list-toggle__icon dropdown-list-toggle__icon_arrow"></div>
+                            <div class="dropdown-list-toggle__title">Полиграфия</div>
+                            <div class="dropdown-list-toggle__icon dropdown-list-toggle__icon_medium dropdown-list-toggle__icon_print dropdown-list-toggle__icon_align-left"></div>
+                        </div>
+                        <div js-dropdown-list class="dropdown-list">
+                            <div class="dropdown-list__wrapper">
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">Полиуретановые дисперсии</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Аквапол</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">Пленкообразователи</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Акрол</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">Полиакрилат-полиолы</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Лапрол АК</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">Фотоотверждаемые композиции</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Акролат ПФ</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">ПУ-загуститель</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Лапрол ДЗ</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">Низковязкие эпоксидные смолы</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Элад</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">Диспергаторы</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Макромер П</div>
+                                                <div class="dropdown-list-item__subtitle">Макромер C</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-list__item">
+                                    <div class="dropdown-list-item">
+                                        <div class="dropdown-list-item__bullet"></div>
+                                        <div class="dropdown-list-item__content">
+                                            <div class="dropdown-list-item__title">Коалесценты</div>
+                                            <div class="dropdown-list-item__subtitles">
+                                                <div class="dropdown-list-item__subtitle">Лапрол 251</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block_gap_xxxlarge">
+            <div class="promo">
+                <div class="promo__left">
+                    <div class="promo__description block_rounded-small block_black">
+                        Макромер обладает научно-техническим центром с полным циклом разработки продукции, а также возможностями модификации продукции под специальные требования заказчика, и собственными производственными мощностями.
+                    </div>
+                </div>
+                <div class="promo__right">
+                    <a href="" target="_blank" class="button button_text_white button_link button_blue button_large">
+                        <span class="button__title">
+                            Скачать каталог продукции
+                        </span>
+                        <span class="button__icon button__icon_doc"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div  class="feedback block">
+            <div class="feedback__wrapper">
+                <div class="feedback__left">
+                    <div class="feedback-description block_black block_rounded-small">
+                        <div class="feedback-description__title">Не нашли, что искали?</div>
+                        <div class="feedback-description__content">Оставьте заявку и наши специалисты оперативно рассмотрят обращение и ответят на любой интересующий вас вопрос.</div>
+                    </div>
+                </div>
+                <div class="feedback__right">
+                    <div class="feedback-form">
+                        <form id="feedback-form" class="feedback-form__wrapper" js-feedback-form action="">
+                            <div class="feedback-form__input-section">
+                                <label for="name" class="feedback-form__label">Имя*</label>
+                                <input id="name" class="feedback-form__input-text is-error" type="text" name="name" required>
+                            </div>
+                            <div class="feedback-form__input-section">
+                                <label for="company" class="feedback-form__label">Компания*</label>
+                                <input id="company" class="feedback-form__input-text" type="text" name="company" required>
+                            </div>
+                            <div class="feedback-form__input-section">
+                                <label for="phone" class="feedback-form__label">Телефон*</label>
+                                <input id="phone" class="feedback-form__input-text" type="text" name="phone" required>
+                            </div>
+                            <div class="feedback-form__input-section">
+                                <label for="city" class="feedback-form__label">Город*</label>
+                                <input id="city" class="feedback-form__input-text" type="text" name="city" minlength="2" required>
+                            </div>
+                            <div class="feedback-form__input-section">
+                                <label for="field" class="feedback-form__label">Ваша отрасль*</label>
+                                <div class="select">
+                                </div>
+                            </div>
+                            <div class="feedback-form__input-section feedback-form__input-section_submit">
+                                <div class="feedback-input-section">
+                                    <div class="feedback-input-section__main">
+                                        <button type="submit" class="button button_blue button_text_white button_middle">Отправить заявку</button>
+                                    </div>
+                                    <div class="feedback-input-section__extra">
+                                        Нажимая кнопку я выражаю своё согласие на обработку персональных данных в соответствии с <a href="#" target="_blank">условиями</a>.
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="feedback-form__error-text">
+                            * Обязательные поля не заполнены
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="block block_align_center body__footer">
+        <footer class="footer">
+            <div class="footer__wrapper">
+                <div class="footer__main">
+                    <img src="dist/images/logo.png" class="footer__logo" width="280" height="28">
+                    <div class="footer__copyright">© Copyright ООО "НПП "Макромер" им. В.С. Лебедева" (с 2022 г)</div>
+                </div>
+                <div class="footer__extra">
+                    <div class="footer__address">600016, Владимирская обл., г. Владимир,<br>ул. Большая Нижегородская, д. 77</div>
+                    <div class="footer__contact-info">
+                        <a class="link link_bold link_medium link_black" href="tel:+78002006595">8 800 200 65 95</a>
+                        <a href="mailto:adress@macromer.ru">adress@macromer.ru</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+<!--    <script src="dist/js/vendor.js"></script>-->
     <script src="dist/js/common.js"></script>
 </body>
 </html>

@@ -1,0 +1,103 @@
+$block-padding: 30px;
+$block-padding-small: 15px;
+$block-width: (320px - ($block-padding-small * 2));
+$block-max-width: 1180px;
+$block-max-width-small: 980px;
+$block-max-width-large: 1420px;
+
+$grid-gap: 20px;
+$grid-width: 80px;
+
+// Font sizes
+$size-xxxxlarge: 38px;
+$size-xxxlarge: 32px;
+$size-xxlarge: 24px;
+$size-xlarge: 20px;
+$size-large: 18px;
+$size-medium: 16px;
+$size-main: 16px;
+$size-small: 14px;
+$size-xsmall: 12px;
+$size-xxsmall: 11px;
+$size-xxxsmall: 10px;
+
+//$line-xxxlarge: (40/no-unit($size-xxxlarge))
+//$line-xxlarge: (33/no-unit($size-xxlarge))
+//$line-xlarge: (31/no-unit($size-xlarge))
+//$line-large: (26/no-unit($size-large))
+//$line-medium: $line-main: (24/no-unit($size-medium))
+//$line-small: (22/no-unit($size-small))
+//$line-xsmall: (18/no-unit($size-xsmall))
+$line-main: calc(24/16);
+//
+//
+//define-size-line(48, 54)
+//define-size-line(44, 44)
+//define-size-line(40, 42)
+//define-size-line(38, 40)
+//define-size-line(36, 38)
+//define-size-line(30, 32)
+//define-size-line(24, 33)
+//define-size-line(20, 31)
+//define-size-line(18, 26)
+//define-size-line(18, 28)
+//define-size-line(16, 24)
+//define-size-line(14, 22)
+//define-size-line(14, 20)
+//define-size-line(12, 18)
+//define-size-line(12, 16)
+//define-size-line(11, 13)
+
+
+// Margins
+//$margin-paragraph: (24/no-unit($size-main))em;
+
+
+// Fonts
+$font-fallback-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+$font-commissioner: 'Commissioner';
+$font-main: $font-commissioner;
+
+
+// Colors
+$color-red-light: #F16363;
+$color-red: #E94D4E;
+$color-main: #F0F0F0;
+$color-black: #000;
+
+$color-white: #fff;
+
+$color-grey-light: #F2F2F2;
+$color-grey: #e0e0e0;
+
+$color-green: #5DC789;
+
+$color-orange: #FF6F1E;
+$color-orange-dark: #F04800;
+
+$color-blue: #2997D7;
+$color-blue-xlight: #DAECF6;
+$color-blue-light: #a0cfeb;
+$color-blue-dark: #1C77AC;
+$color-blue-xdark: #0f3d57;
+
+//$color-main: $color-blue-xdark;
+$color-link: $color-blue;
+$color-hover: $color-blue-dark;
+$color-error: $color-red;
+
+
+// gradients
+$gradient-green: linear-gradient(180deg, #6ECF97 0%, #2AB062 100%);
+$gradient-green-dark: linear-gradient(180deg, #22C969 0%, #14A450 100%);
+$gradient-green-xdark: linear-gradient(180deg, #12A952 0%, #0D863F 100%);
+
+$gradient-blue: linear-gradient(180deg, #38AAEA 0%, #2C94CE 100%);
+$gradient-blue-dark: linear-gradient(180deg, #2198DA 0%, #1983BF 100%);
+$gradient-blue-xdark: linear-gradient(180deg, #1B89C8 0%, #1170A5 100%);
+
+$gradient-red: linear-gradient(180deg, #FF8282 0%, #EB5757 100%);
+$gradient-red-dark: linear-gradient(180deg, #EF5757 0%, #DA4040 100%);
+$gradient-red-xdark: linear-gradient(180deg, #DB3131 0%, #B81A1A 100%);
+
+$transition-main: .25s cubic-bezier(0.645, 0.045, 0.355, 1);

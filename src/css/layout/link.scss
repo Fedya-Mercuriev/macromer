@@ -1,0 +1,20 @@
+.link {
+  transition: 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.link_bold {
+  font-weight: 600;
+}
+
+.link_black {
+  color: #000000;
+  opacity: 1;
+}
+
+.link_black:hover {
+  opacity: 0.89;
+}
+
+.link_medium {
+  font-size: 18px;
+}

@@ -244,6 +244,7 @@
                 const validateErrors = $form.formValidate();
 
                 if(lock || !$.isEmptyObject(validateErrors) || (typeof isValid === 'function' && !isValid.call(null, form))){
+                    processRequestError($form, validateErrors);
                     return;
                 }
 
@@ -302,5 +303,7 @@
             });
         });
     };
+
+    $('[js-feedback-form]').form();
 
 })(jQuery, window);

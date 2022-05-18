@@ -21,7 +21,7 @@ const templateSelect = (data = [], defaultText = 'Р’С‹Р±РµСЂРёС�
   return `
   <div class="select__backdrop" data-select="backdrop"></div>
   <div class="select__trigger-wrapper">
-  <input id="field" type="text" class="select__trigger" data-select="trigger" value="${defaultText}" disabled>
+  <input id="field" type="text" class="field select__trigger" data-select="trigger" value="${defaultText}" disabled data-validate="true">
   </div>
   <div class="select__dropdown">
     <ul class="select__items">

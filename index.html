@@ -10,6 +10,7 @@
 <!--    <link rel="stylesheet" href="dist/css/vendor.css">-->
     <link rel="stylesheet" href="dist/css/common.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!--    <script src="http://elma.macromer.ru/web-forms/assets/widget.js"></script>-->
 </head>
 <body class="body">
 <div class="body__wrapper">
@@ -772,22 +773,22 @@
                 </div>
                 <div class="feedback__right">
                     <div class="feedback-form">
-                        <form id="feedback-form" class="feedback-form__wrapper" js-feedback-form action="">
+                        <form js-feedback-form id="feedback-form" class="feedback-form__wrapper" action="/" method="post">
                             <div class="feedback-form__input-section">
                                 <label for="name" class="feedback-form__label">Имя*</label>
-                                <input id="name" class="feedback-form__input-text is-error" type="text" name="name" required>
+                                <input id="name" class="field feedback-form__input-text" type="text" name="name" data-validate="true">
                             </div>
                             <div class="feedback-form__input-section">
                                 <label for="company" class="feedback-form__label">Компания*</label>
-                                <input id="company" class="feedback-form__input-text" type="text" name="company" required>
+                                <input id="company" class="field feedback-form__input-text" type="text" name="company" data-validate="true">
                             </div>
                             <div class="feedback-form__input-section">
                                 <label for="phone" class="feedback-form__label">Телефон*</label>
-                                <input id="phone" class="feedback-form__input-text" type="text" name="phone" required>
+                                <input js-input-phone id="phone" class="field feedback-form__input-text" type="text" name="phone" data-validate="true">
                             </div>
                             <div class="feedback-form__input-section">
                                 <label for="city" class="feedback-form__label">Город*</label>
-                                <input id="city" class="feedback-form__input-text" type="text" name="city" minlength="2" required>
+                                <input id="city" class="field feedback-form__input-text" type="text" name="city" minlength="2" data-validate="true">
                             </div>
                             <div class="feedback-form__input-section">
                                 <label for="field" class="feedback-form__label">Ваша отрасль*</label>
@@ -831,7 +832,7 @@
         </footer>
     </div>
 </div>
-<!--    <script src="dist/js/vendor.js"></script>-->
+    <script src="dist/vendor.js"></script>
     <script src="dist/js/common.js"></script>
 </body>
 </html>

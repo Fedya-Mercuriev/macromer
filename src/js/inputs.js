@@ -2,8 +2,8 @@ app.bind('default inputShadow inputs basic', function(context){
     $('[js-inputShadow]', context).inputShadow();
 });
 
-app.bind('default inputmask inputs basic', function(context){
-    $('[js-input-phone]', context).attr('data-is-inputmask', true).inputmask({
+(function() {
+    $('[js-input-phone]').attr('data-is-inputmask', true).inputmask({
         mask: '+7 (999) 999-99-99',
         placeholder: '+7 (___) ___-__-__',
         jitMasking: 4,
@@ -20,7 +20,9 @@ app.bind('default inputmask inputs basic', function(context){
             $(this).trigger('maskIncomplete');
         }
     });
+})();
 
+app.bind('default inputmask inputs basic', function(context){
     $('[js-input-number]', context).attr('data-is-inputmask', true).each((inputIndex, input) => {
         const $input = $(input);
         let minValue = typeof $input.data('min') !== 'undefined' ? parseInt($input.data('min')) : $input.prop('min').length > 0 ? $input.prop('min') : 1;

@@ -776,11 +776,11 @@
                         <form js-feedback-form id="feedback-form" class="feedback-form__wrapper" action="/" method="post">
                             <div class="feedback-form__input-section">
                                 <label for="name" class="feedback-form__label">Имя*</label>
-                                <input id="name" class="field feedback-form__input-text" type="text" name="name" data-validate="true">
+                                <input id="name" class="field feedback-form__input-text" type="text" minlength="2" maxlength="40" name="name" data-validate="true">
                             </div>
                             <div class="feedback-form__input-section">
                                 <label for="company" class="feedback-form__label">Компания*</label>
-                                <input id="company" class="field feedback-form__input-text" type="text" name="company" data-validate="true">
+                                <input id="company" class="field feedback-form__input-text" type="text" name="company" minlength="2" maxlength="40" data-validate="true">
                             </div>
                             <div class="feedback-form__input-section">
                                 <label for="phone" class="feedback-form__label">Телефон*</label>
@@ -788,7 +788,7 @@
                             </div>
                             <div class="feedback-form__input-section">
                                 <label for="city" class="feedback-form__label">Город*</label>
-                                <input id="city" class="field feedback-form__input-text" type="text" name="city" minlength="2" data-validate="true">
+                                <input id="city" class="field feedback-form__input-text" type="text" name="city" minlength="2" maxlength="40" data-validate="true">
                             </div>
                             <div class="feedback-form__input-section">
                                 <label for="field" class="feedback-form__label">Ваша отрасль*</label>

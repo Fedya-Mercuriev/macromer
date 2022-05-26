@@ -31,7 +31,6 @@
 			const _this = this;
 
 			this.dropdowns.each(function(_, item) {
-				debugger;
 				$(item).find('[js-dropdown-list]').off('.toggle-dropdown').on('click.toggle-dropdown', function(e) {
 					e.stopPropagation();
 				});

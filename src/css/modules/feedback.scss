@@ -7,11 +7,15 @@
     display: flex;
   }
   &__left {
-    flex: 0 1 600px;
+    flex: 0 1 790px;
     margin-right: 60px;
   }
   &__right {
-    flex: 0 1 920px;
+    flex: 0 1 690px;
+    text-align: right;
+    & iframe {
+      display: inline-block;
+    }
   }
 }
 

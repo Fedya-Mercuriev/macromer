@@ -2,15 +2,13 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Макромер</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600&display=swap" rel="stylesheet">
-<!--    <link rel="stylesheet" href="dist/css/vendor.css">-->
     <link rel="stylesheet" href="dist/css/common.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="http://elma.macromer.ru/web-forms/assets/widget.js"></script>
 </head>
 <body class="body">
 <div class="body__wrapper">
@@ -763,7 +761,7 @@
                 </div>
             </div>
         </div>
-        <div  class="feedback block">
+        <div  class="feedback">
             <div class="feedback__wrapper">
                 <div class="feedback__left">
                     <div class="feedback-description block_black block_rounded-small">
@@ -772,8 +770,8 @@
                     </div>
                 </div>
                 <div class="feedback__right">
-                    <div class="feedback-form">
-                        <form js-feedback-form id="feedback-form" class="feedback-form__wrapper" action="http://elma.macromer.ru/pub/v1/app/_clients/obratnaya_svyaz/create" method="post">
+                    <div js-feedback-form class="feedback-form">
+                        <form id="feedback-form" class="feedback-form__wrapper" action="http://elma.macromer.ru/pub/v1/app/_clients/obratnaya_svyaz/create" method="post">
                             <div class="feedback-form__input-section">
                                 <label for="name" class="feedback-form__label">Имя*</label>
                                 <input id="name" class="field feedback-form__input-text" type="text" minlength="2" maxlength="40" name="name" data-validate="true">
@@ -832,6 +830,7 @@
         </footer>
     </div>
 </div>
+<script src="http://elma.macromer.ru/web-forms/assets/widget.js"></script>
 <script>document.Elma365WebForms.form("9132246f-2255-419d-b63c-490dec2959d2"); </script>
     <script src="dist/vendor.js"></script>
     <script src="dist/js/common.js"></script>

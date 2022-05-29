@@ -304,6 +304,4 @@
         });
     };
 
-    $('[js-feedback-form]').form();
-
 })(jQuery, window);

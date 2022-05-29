@@ -761,7 +761,7 @@
                 </div>
             </div>
         </div>
-        <div  class="feedback">
+        <div id="feedback-form" class="feedback">
             <div class="feedback__wrapper">
                 <div class="feedback__left">
                     <div class="feedback-description block_black block_rounded-small">
@@ -770,44 +770,7 @@
                     </div>
                 </div>
                 <div class="feedback__right">
-                    <div js-feedback-form class="feedback-form">
-                        <form id="feedback-form" class="feedback-form__wrapper" action="http://elma.macromer.ru/pub/v1/app/_clients/obratnaya_svyaz/create" method="post">
-                            <div class="feedback-form__input-section">
-                                <label for="name" class="feedback-form__label">Имя*</label>
-                                <input id="name" class="field feedback-form__input-text" type="text" minlength="2" maxlength="40" name="name" data-validate="true">
-                            </div>
-                            <div class="feedback-form__input-section">
-                                <label for="company" class="feedback-form__label">Компания*</label>
-                                <input id="company" class="field feedback-form__input-text" type="text" name="company" minlength="2" maxlength="40" data-validate="true">
-                            </div>
-                            <div class="feedback-form__input-section">
-                                <label for="phone" class="feedback-form__label">Телефон*</label>
-                                <input js-input-phone id="phone" class="field feedback-form__input-text" type="text" name="phone" data-validate="true">
-                            </div>
-                            <div class="feedback-form__input-section">
-                                <label for="city" class="feedback-form__label">Город*</label>
-                                <input id="city" class="field feedback-form__input-text" type="text" name="city" minlength="2" maxlength="40" data-validate="true">
-                            </div>
-                            <div class="feedback-form__input-section">
-                                <label for="field" class="feedback-form__label">Ваша отрасль*</label>
-                                <div class="select">
-                                </div>
-                            </div>
-                            <div class="feedback-form__input-section feedback-form__input-section_submit">
-                                <div class="feedback-input-section">
-                                    <div class="feedback-input-section__main">
-                                        <button type="submit" class="button button_blue button_text_white button_middle">Отправить заявку</button>
-                                    </div>
-                                    <div class="feedback-input-section__extra">
-                                        Нажимая кнопку я выражаю своё согласие на обработку персональных данных в соответствии с <a href="#" target="_blank">условиями</a>.
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                        <div class="feedback-form__error-text">
-                            * Обязательные поля не заполнены
-                        </div>
-                    </div>
+                    <div js-feedback-form class="feedback-form"></div>
                 </div>
             </div>
         </div>
@@ -831,8 +794,8 @@
     </div>
 </div>
 <script src="http://elma.macromer.ru/web-forms/assets/widget.js"></script>
-<script>document.Elma365WebForms.form("9132246f-2255-419d-b63c-490dec2959d2"); </script>
-    <script src="dist/vendor.js"></script>
+<script>document.Elma365WebForms.form("9132246f-2255-419d-b63c-490dec2959d2");</script>
+    <script src="dist/js/vendor.js"></script>
     <script src="dist/js/common.js"></script>
 </body>
 </html>

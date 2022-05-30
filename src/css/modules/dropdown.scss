@@ -5,32 +5,17 @@
   &__wrapper {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    margin-left: -20px;
-    margin-right: -20px;
   }
   &__item {
     position: relative;
-    flex: 1 1 760px;
-    margin-left: 20px;
-    margin-right: 20px;
+    flex: 1 1 calc(50% - 40px);
     margin-bottom: 20px;
   }
-}
-
-@include mq('desktop-ultrawide', max) {
-  .dropdowns {
-    &__item {
-      flex: 1 1 560px;
-    }
+  &__item:nth-child(odd) {
+    margin-right: 20px;
   }
-}
-
-@include mq('desktop', max) {
-  .dropdowns {
-    &__item {
-      flex: 1 1 360px;
-    }
+  &__item:nth-child(even) {
+    margin-left: 20px;
   }
 }
 
@@ -38,6 +23,10 @@
   .dropdowns {
     &__item {
       flex: 1 1 100%;
+    }
+    &__item:nth-child(odd), &__item:nth-child(even) {
+      margin-left: 0;
+      margin-right: 0;
     }
   }
 }

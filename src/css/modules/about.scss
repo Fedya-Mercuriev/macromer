@@ -115,3 +115,11 @@
     }
   }
 }
+
+@include mq('phone-small', max) {
+  .about {
+    &__title {
+      max-width: 232px;
+    }
+  }
+}

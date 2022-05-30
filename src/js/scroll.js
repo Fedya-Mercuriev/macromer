@@ -3,9 +3,9 @@
 
     $scrollToTriggers.each(function(_, item) {
         $(item).off('.scroll-to').on('click.scroll-to', function(e) {
-            // e.preventDefault();
+            e.preventDefault();
             const target = $(e.currentTarget).attr('js-scroll-to');
-            $(window).scrollTo($(`#${target}`), 800);
+            $(window).scrollTo($(`#${target}`).offset().top - 90, 800);
         })
     });
 })();
